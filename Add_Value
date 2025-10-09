@@ -1,0 +1,18 @@
+#include <iostream>
+#include <windows.h>
+using namespace std;
+
+//funktion som lägger till ett värde i en array
+
+
+    void Add_Value(int list[], int &amount){
+        if (amount < 10) {
+            cout << "Skriv in ett värde(heltal): " << '\n';
+        cin >> list[amount]; //tar input och lägger in det i listan
+        amount++;
+
+        } else { 
+            cout << "Listan har redan 10 värden." << '\n';
+        }
+
+    }

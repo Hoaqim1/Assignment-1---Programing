@@ -3,8 +3,11 @@
 
 using namespace std;
 
-    int main(){
+int main(){
+    SetConsoleOutput(65001);
 
+    int list[10];
+    int amount = 0;
     int choice;
     
     do{
