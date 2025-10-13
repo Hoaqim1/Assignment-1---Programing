@@ -1,5 +1,6 @@
 #include <iostream>
 #include <windows.h>
+#include <cmath>
 
 using namespace std;
 
