@@ -10,7 +10,7 @@ int main(){
     
     do{
 
-    cout << "Välj mellan 1 till 6: ";
+    cout << "Välj mellan 1 till 7: ";
 
     cout << "1. Lägg till ett värde i listan " << '\n';
     cout << "2. Visa antal värden i listan " << '\n';
