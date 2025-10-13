@@ -6,6 +6,19 @@ using namespace std;
 inte har några värden. Måste lägga in varians och standaravvikelser. WIP
 */ 
 
+void Add_Value(int list[], int &amount){
+    if (amount < 10) {
+        cout << "Skriv in ett värde(heltal): " << '\n';
+        cin >> list[amount]; //tar input och lägger in det i listan
+        amount++;
+
+        } else { 
+            cout << "Listan har redan 10 värden." << '\n';
+        }
+
+    }
+
+
 void Show_Value(int list[], int amount){
         if (amount == 0){
             cout << "Listan har inga värden" << '\n';
