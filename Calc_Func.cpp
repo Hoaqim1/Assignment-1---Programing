@@ -21,10 +21,14 @@ void Add_Value(double list[], int &amount, double &sum){
     }
 
 //Visar värdet och säger även om listan inte har några värden
-void Show_Value(double list[], int amount, double &sum){
+void Show_Value(double list[], int amount){
         if (amount == 0){
             cout << "Listan har inga värden" << '\n';
             return;
+    }
+    cout << "Värdena i listan: " << '\n';
+    for (int i = 0; i < amount; i++){
+        cout << list[i] << " ";
     }
 }
 void Calc_Sum(double list[], int amount, double &sum){ 
