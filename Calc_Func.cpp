@@ -80,4 +80,21 @@ void Sort_Func(double list[], int &amount){
         
     }
 }
+void Search_Func(double list[], int amount){
+    if (amount == 0) {
+        cout << "Listan har inga värden" << '\n';
+        return;
+    }
+    double search;
+    cout << "Sök efter ett värde: ";
+    cin >> search;
 
+    bool find = false;
+    for (int i = 0; i < amount; i++) {
+        if (list[i] == search) {
+            cout << "Värdet " << search << " finns i listan" << '\n';
+            find = true;
+        }
+    }
+
+}
