@@ -7,7 +7,8 @@ using namespace std;
 inte har några värden. 
 */ 
 
-void Add_Value(double list[], int &amount){
+//Här är funktionen för att lägga till värden
+void Add_Value(double list[], int &amount, double &sum){
     if (amount < 10) {
         cout << "Skriv in ett värde, maximal mängd värden är 10: " << '\n';
         cin >> list[amount]; //tar input och lägger in det i listan
@@ -16,45 +17,57 @@ void Add_Value(double list[], int &amount){
         } else { 
             cout << "Listan har redan 10 värden." << '\n';
         }
-
     }
 
-
-void Show_Value(double list[], int amount){
+//Visar värdet och säger även om listan inte har några värden
+void Show_Value(double list[], int amount, double &sum){
         if (amount == 0){
             cout << "Listan har inga värden" << '\n';
             return;
-        }
-
-        //variabler för summa, minimum och maximum
-        double sum = 0;
-        double Minval = list[0];
-        double Maxval = list[0];
-
+    }
+}
+void Calc_Sum(double list[], int amount, double &sum){ 
+        sum = 0;
         for(int i = 0; i < amount; i++){
             sum += list[i];
-            if(list[i] < Minval) Minval = list[i];
-            if(list[i] > Maxval) Maxval = list[i];
         }
+}
+void Calc_mdlv(double list[], int amount, double &mdlv){
+    double sum;
+    Calc_Sum(list, amount, sum);
+    mdlv = sum / amount;
+    }
 
-        //tar summan av hela listan och delar med antal värden för att få medelvärdet
-        double mdlv = sum /amount;
-        //beräkna variansen(https://www.youtube.com/watch?v=fYblNUZZqjA), hade väldigt svårt att förstå så utgick från denna video.
-        double var = 0;
+void Calc_Min(double list[], int amount, double &MinVal){
+        MinVal = list[0];
+        for(int i = 1; i < amount; i++){
+            if(list[i] < MinVal) MinVal = list[i];
+    }
+}
+void Calc_Max(double list[], int amount, double &MaxVal){
+        MaxVal = list[0];
+        for(int i = 1; i < amount; i++){
+        if(list[i] > MaxVal) MaxVal = list[i];
+        }
+}     
+
+/*beräkna variansen
+(https://www.youtube.com/watch?v=fYblNUZZqjA)
+(https://www.geeksforgeeks.org/dsa/program-for-variance-and-standard-deviation-of-an-array)
+hade väldigt svårt att förstå så utgick från denna video och sidan under.
+ */
+void Calc_Var(double list[], int amount, double &var){
+    double mdlv;
+    Calc_mdlv(list, amount, mdlv);
+    var = 0;
         for(int i = 0; i < amount; i++){
             var += pow(list[i] - mdlv, 2);
         }
         var = var / amount; 
-
-        double stdav = sqrt(var); //standardavvikelsen är roten ur variansen
-
-
-
-        cout << "Summan av värdena i arrayen är: " << sum << '\n';
-        cout << "Minsta värdet i arrayen är: " << Minval << '\n';
-        cout << "Största värdet i arrayen är: " << Maxval << '\n';
-        cout << "Medelvärdet av värdena i arrayen är: "  << mdlv << '\n';
-        cout << "Variansen är: " << var << '\n';
-        cout << "Standardavvikelsen är: " << stdav << '\n';
-
+}
+void Calc_stdav(double list[], int amount, double &stdav){
+    //standardavvikelsen är roten ur variansen
+    double var;
+    Calc_Var(list, amount, var);
+    stdav = sqrt(var);
     }
