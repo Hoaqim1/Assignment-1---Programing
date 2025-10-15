@@ -49,4 +49,3 @@ Godkänd: Uppfyller kraven 1-4 enligt specifikation.
 Väl Godkänd: Studenten har dessutom implementerat minst en eller två extra
 funktionaliteter, beroende på utmaningens komplexitet. Studenten har även
 motiverat sina tekniska val i dokumentationen.
-

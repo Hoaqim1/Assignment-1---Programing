@@ -9,7 +9,7 @@ inte har några värden.
 
 void Add_Value(double list[], int &amount){
     if (amount < 10) {
-        cout << "Skriv in ett värde: " << '\n';
+        cout << "Skriv in ett värde, maximal mängd värden är 10: " << '\n';
         cin >> list[amount]; //tar input och lägger in det i listan
         amount++;
 

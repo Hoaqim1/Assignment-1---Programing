@@ -4,14 +4,12 @@
 
 using namespace std;
 
-int main(){
-    SetConsoleOutputCP(65001);
-
+void Menu(double list[], int &amount){
     int choice;
-    
+
     do{
 
-    cout << "Välj mellan 1 till 7: ";
+    cout << "Välj mellan 1 till 7 " << '\n';
 
     cout << "1. Lägg till ett värde i listan " << '\n';
     cout << "2. Visa antal värden i listan " << '\n';
@@ -44,7 +42,7 @@ int main(){
         cout << "6. Visa standardavvikelsen av alla värden i listan: " << '\n';
         break;
     case 7:
-        cout << "7. Avsluta\n";
+        cout << "7. Avsluta" << '\n';
         break;
     default:
         cout << "Ogiltig inmatning, Välj mellan 1 och 7!" << '\n';
@@ -52,5 +50,4 @@ int main(){
     }
     } while(choice != 7);
 
-        return 0;
 }
