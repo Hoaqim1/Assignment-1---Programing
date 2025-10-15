@@ -10,6 +10,6 @@ Make the array better, use sizeof to make it not just limited to 10 values. Migh
 More to add, can't come up with anything right now that i've noticed at this moment.
 
 IMPORTANT!
-Missing sort function
-Missing find value function
+Missing sort function(FIXED)
+Missing find value function(FIXED)
 Overlook and refine comments
