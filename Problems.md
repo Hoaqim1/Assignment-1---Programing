@@ -14,3 +14,8 @@ Missing sort function(FIXED)
 Fix sort function, only sorts one way
 Missing find value function(FIXED)
 Overlook and refine comments
+
+BEFORE DEADLINE
+Fix sort function, only sorts one way
+Overlook and refine comments
+find more problems to fix, to tired right now
