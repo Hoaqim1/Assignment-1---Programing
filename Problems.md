@@ -11,5 +11,6 @@ More to add, can't come up with anything right now that i've noticed at this mom
 
 IMPORTANT!
 Missing sort function(FIXED)
+Fix sort function, only sorts one way
 Missing find value function(FIXED)
 Overlook and refine comments
