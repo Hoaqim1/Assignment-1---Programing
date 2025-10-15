@@ -1,6 +1,7 @@
 #include <iostream>
 #include <windows.h>
 #include <cmath>
+#include <algorithm>
 using namespace std;
 
 /*Denna funktion beräknar och visar statistik som summan, minsta, största, medelvärdet, varians och standardavvikelser i en lista, dock så nekar den användaren om listan
@@ -70,4 +71,13 @@ void Calc_stdav(double list[], int amount, double &stdav){
     double var;
     Calc_Var(list, amount, var);
     stdav = sqrt(var);
+}
+void Sort_Func(double list[], int &amount){
+    sort (list, list + amount);
+
+    for(int i = 0; i < amount; i++){
+        cout << list[i] << " ";
+        
     }
+}
+
