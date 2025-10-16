@@ -22,34 +22,50 @@ void Add_Value(double list[], int &amount, double &sum){
 
 //Visar värdet och säger även om listan inte har några värden
 void Show_Value(double list[], int amount){
-        if (amount == 0){
-            cout << "Listan har inga värden" << '\n';
-            return;
+    if (amount == 0) {
+        cout << "Listan har inga värden" << '\n';
+        return;
     }
     cout << "Värdena i listan: " << '\n';
     for (int i = 0; i < amount; i++){
         cout << list[i] << " ";
     }
 }
-void Calc_Sum(double list[], int amount, double &sum){ 
+void Calc_Sum(double list[], int amount, double &sum){
+    if (amount == 0) {
+        cout << "Listan har inga värden" << '\n';
+        return;
+    }
         sum = 0;
         for(int i = 0; i < amount; i++){
             sum += list[i];
         }
 }
 void Calc_mdlv(double list[], int amount, double &mdlv){
+    if (amount == 0) {
+        cout << "Listan har inga värden" << '\n';
+        return;
+    }
     double sum;
     Calc_Sum(list, amount, sum);
     mdlv = sum / amount;
     }
 
 void Calc_Min(double list[], int amount, double &MinVal){
+    if (amount == 0) {
+        cout << "Listan har inga värden" << '\n';
+        return;
+    }
         MinVal = list[0];
         for(int i = 1; i < amount; i++){
             if(list[i] < MinVal) MinVal = list[i];
     }
 }
 void Calc_Max(double list[], int amount, double &MaxVal){
+    if (amount == 0) {
+        cout << "Listan har inga värden" << '\n';
+        return;
+    }
         MaxVal = list[0];
         for(int i = 1; i < amount; i++){
         if(list[i] > MaxVal) MaxVal = list[i];
@@ -62,6 +78,10 @@ void Calc_Max(double list[], int amount, double &MaxVal){
 hade väldigt svårt att förstå så utgick från denna video och sidan under.
  */
 void Calc_Var(double list[], int amount, double &var){
+    if (amount == 0) {
+        cout << "Listan har inga värden" << '\n';
+        return;
+    }
     double mdlv;
     Calc_mdlv(list, amount, mdlv);
     var = 0;
@@ -71,12 +91,20 @@ void Calc_Var(double list[], int amount, double &var){
         var = var / amount; 
 }
 void Calc_stdav(double list[], int amount, double &stdav){
+    if (amount == 0) {
+        cout << "Listan har inga värden" << '\n';
+        return;
+    }
     //standardavvikelsen är roten ur variansen
     double var;
     Calc_Var(list, amount, var);
     stdav = sqrt(var);
 }
 void Sort_Func_Asc(double list[], int &amount){
+    if (amount == 0) {
+        cout << "Listan har inga värden" << '\n';
+        return;
+    }
     sort (list, list + amount);
 
     for(int i = 0; i < amount; i++){
@@ -85,6 +113,10 @@ void Sort_Func_Asc(double list[], int &amount){
     }
 }
 void Sort_Func_Desc(double list[], int &amount){
+    if (amount == 0) {
+        cout << "Listan har inga värden" << '\n';
+        return;
+    }
     sort (list, list + amount, greater<double>());
 
     for(int i = 0; i < amount; i++){
