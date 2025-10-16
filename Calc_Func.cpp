@@ -18,7 +18,7 @@ void Add_Value(double list[], int &amount, double &sum){
         }
     bool CorrVal = false;
     double inp;
-
+    //Kollar så att koden inte är 10 eller mer och kollar efter ogiltig inmatning
     while (amount < 10 && !CorrVal) {
         cout << "Skriv in ett värde, maximal mängd värden är 10: " << '\n';
         if (cin >> inp) { 
@@ -46,6 +46,7 @@ void Show_Value(double list[], int amount){
         cout << list[i] << " ";
     }
 }
+//Räknar ut summan av värden i listan
 void Calc_Sum(double list[], int amount, double &sum){
     if (amount == 0) {
         cout << "Listan har inga värden" << '\n';
@@ -56,6 +57,7 @@ void Calc_Sum(double list[], int amount, double &sum){
             sum += list[i];
         }
 }
+//Räknar ut medelvärdet av värden i listan
 void Calc_mdlv(double list[], int amount, double &mdlv){
     if (amount == 0) {
         cout << "Listan har inga värden" << '\n';
@@ -65,7 +67,7 @@ void Calc_mdlv(double list[], int amount, double &mdlv){
     Calc_Sum(list, amount, sum);
     mdlv = sum / amount;
     }
-
+//Räknar ut minimum värde i listan
 void Calc_Min(double list[], int amount, double &MinVal){
     if (amount == 0) {
         cout << "Listan har inga värden" << '\n';
@@ -76,6 +78,7 @@ void Calc_Min(double list[], int amount, double &MinVal){
             if(list[i] < MinVal) MinVal = list[i];
     }
 }
+//Räknar ut maximalt värde i listan
 void Calc_Max(double list[], int amount, double &MaxVal){
     if (amount == 0) {
         cout << "Listan har inga värden" << '\n';
@@ -115,6 +118,7 @@ void Calc_stdav(double list[], int amount, double &stdav){
     Calc_Var(list, amount, var);
     stdav = sqrt(var);
 }
+//Sorterar listan i fallande ordning
 void Sort_Func_Asc(double list[], int &amount){
     if (amount == 0) {
         cout << "Listan har inga värden" << '\n';
@@ -127,6 +131,7 @@ void Sort_Func_Asc(double list[], int &amount){
         
     }
 }
+//Sorterar listan i stigande ordning
 void Sort_Func_Desc(double list[], int &amount){
     if (amount == 0) {
         cout << "Listan har inga värden" << '\n';
@@ -139,6 +144,7 @@ void Sort_Func_Desc(double list[], int &amount){
         
     }
 }
+//Funktion för att söka efter ett visst värde
 void Search_Func(double list[], int amount){
     if (amount == 0) {
         cout << "Listan har inga värden" << '\n';

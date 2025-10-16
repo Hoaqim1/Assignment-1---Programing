@@ -5,6 +5,7 @@
 
 using namespace std;
 
+//Deklarerade funktioner
 void Add_Value(double list[], int &amount, double &sum);
 void Show_Value(double list[], int amount, double &sum);
 void Calc_Sum(double list[], int amount, double &sum);
@@ -25,6 +26,7 @@ int main(){
     double list[10];
     int amount = 0;
 
+    //Huvudmenyn
     Menu(list, amount);
 
 

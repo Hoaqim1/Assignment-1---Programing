@@ -5,6 +5,7 @@
 
 using namespace std;
 
+//Deklarerade funktioner från Calc_Func
 void Add_Value(double list[], int &amount, double &sum);
 void Show_Value(double list[], int amount);
 void Calc_Sum(double list[], int amount, double &sum);
@@ -18,7 +19,7 @@ void Sort_Func_Desc(double list[], int &amount);
 void Search_Func(double list[], int amount);
 void Menu(double list[], int &amount);
 
-
+//Funktion för huvudmenyn
 void Menu(double list[], int &amount){
     int choice;
     double sum = 0;
@@ -41,6 +42,8 @@ void Menu(double list[], int &amount){
     cout << "9. Sök efter ett visst värde i listan " << '\n';
     cout << "10. Avsluta " << '\n';
     cout << "Val: ";
+
+    //Kontroll efter ogiltig inmatning
     if (!(cin >> choice)) {
         cout << "Ogiltig inmatning, välj mellan 1 till 10!" << '\n';
         cin.clear();
@@ -48,7 +51,7 @@ void Menu(double list[], int &amount){
         //Ställer om värdet till 0 för att användarens input inte ska sparas i choice, detta rensar minnet då inget värde ges när invalid input sker.
         choice = 0;
     }
-
+    //Menyval hanteras här
     switch (choice){
 
     case 1: 
@@ -95,6 +98,7 @@ void Menu(double list[], int &amount){
         cout << "Ogiltig inmatning, Välj mellan 1 och 10!" << '\n';
         break;
     }
+      //Loopar tills användaren avslutar med input 10    
     } while(choice != 10);
 
 }
