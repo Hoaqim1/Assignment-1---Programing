@@ -10,15 +10,29 @@ inte har några värden.
 
 //Här är funktionen för att lägga till värden
 void Add_Value(double list[], int &amount, double &sum){
-    if (amount < 10) {
-        cout << "Skriv in ett värde, maximal mängd värden är 10: " << '\n';
-        cin >> list[amount]; //tar input och lägger in det i listan
-        amount++;
+    //kollar först att listan inte har mer än 10 värden
+    if (amount >= 10) { 
+        cout << "Listan har redan 10 värden!" << '\n';
+        return;
+        }
+    bool CorrVal = false;
+    double inp;
 
-        } else { 
-            cout << "Listan har redan 10 värden." << '\n';
+    while (amount < 10 && !CorrVal) {
+        cout << "Skriv in ett värde, maximal mängd värden är 10: " << '\n';
+        if (cin >> inp) { 
+            list[amount] = inp; //tar input och lägger in det i listan
+            amount++;
+            CorrVal = true;
+            cout << "Värdet har lagts in i listan!" << '\n';
+        } else {
+            cout << "Ogiltigt värde, använd bara tal och decimaltal!" << '\n';
+            cin.clear();
+            cin.ignore(100, '\n');
         }
     }
+
+}
 
 //Visar värdet och säger även om listan inte har några värden
 void Show_Value(double list[], int amount){
@@ -26,7 +40,7 @@ void Show_Value(double list[], int amount){
         cout << "Listan har inga värden" << '\n';
         return;
     }
-    cout << "Värdena i listan: " << '\n';
+    
     for (int i = 0; i < amount; i++){
         cout << list[i] << " ";
     }
