@@ -1,6 +1,7 @@
 #include <iostream>
 #include <windows.h>
 #include <cmath>
+#include <algorithm>
 
 using namespace std;
 
@@ -12,7 +13,8 @@ void Calc_Min(double list[], int amount, double &MinVal);
 void Calc_Max(double list[], int amount, double &MaxVal);
 void Calc_Var(double list[], int amount, double &var);
 void Calc_stdav(double list[], int amount, double &stdav);
-void Sort_Func(double list[], int &amount);
+void Sort_Func_Asc(double list[], int &amount);
+void Sort_Func_Desc(double list[], int &amount);
 void Search_Func(double list[], int amount);
 void Menu(double list[], int &amount);
 
@@ -28,7 +30,7 @@ void Menu(double list[], int &amount){
 
     do{
 
-    cout << "Välj mellan 1 till 7 " << '\n';
+    cout << "Välj mellan 1 till 10 " << '\n';
 
     cout << "1. Lägg till ett värde i listan " << '\n';
     cout << "2. Visa antal värden i listan " << '\n';
@@ -36,9 +38,10 @@ void Menu(double list[], int &amount){
     cout << "4. Visa medelvärdet av alla värden i listan " << '\n';
     cout << "5. Visa min- och maxvärde av alla värden i listan " << '\n';
     cout << "6. Visa varians och standardavvikelsen av alla värden i listan " << '\n';
-    cout << "7. Sortera listan " << '\n';
-    cout << "8. Sök efter ett visst värde i listan " << '\n';
-    cout << "9. Avsluta " << '\n';
+    cout << "7. Sortera listan stigande ordning" << '\n';
+    cout << "8. Sortera listan fallande ordning" << '\n';
+    cout << "9. Sök efter ett visst värde i listan " << '\n';
+    cout << "10. Avsluta " << '\n';
     cout << "Val: ";
     cin >> choice;
 
@@ -70,21 +73,24 @@ void Menu(double list[], int &amount){
         cout << "Variansen är: " << var << " och standardavvikelsen är: " << stdav << '\n';
         break;
     case 7:
-        Sort_Func(list, amount);
+        Sort_Func_Asc(list, amount);
         cout << '\n';
         break;
     case 8:
-        Search_Func(list, amount);
+        Sort_Func_Desc(list, amount);
         cout << '\n'; 
         break;
     case 9:
+        Search_Func(list, amount);
+        cout << '\n'; 
+        break;
+    case 10:
         cout << "Programmet Avslutas...";
         return;
     default:
-        cout << "Ogiltig inmatning, Välj mellan 1 och 9!" << '\n';
+        cout << "Ogiltig inmatning, Välj mellan 1 och 10!" << '\n';
         break;
     }
-    } while(choice != 9);
+    } while(choice != 10);
 
 }
-

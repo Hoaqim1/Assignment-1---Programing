@@ -76,8 +76,16 @@ void Calc_stdav(double list[], int amount, double &stdav){
     Calc_Var(list, amount, var);
     stdav = sqrt(var);
 }
-void Sort_Func(double list[], int &amount){
+void Sort_Func_Asc(double list[], int &amount){
     sort (list, list + amount);
+
+    for(int i = 0; i < amount; i++){
+        cout << list[i] << " ";
+        
+    }
+}
+void Sort_Func_Desc(double list[], int &amount){
+    sort (list, list + amount, greater<double>());
 
     for(int i = 0; i < amount; i++){
         cout << list[i] << " ";

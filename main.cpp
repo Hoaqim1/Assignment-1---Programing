@@ -13,7 +13,8 @@ void Calc_Max(double list[], int amount, double &MaxVal);
 void Calc_Var(double list[], int amount, double &var);
 void Calc_stdav(double list[], int amount, double &stdav);
 void Sort_Func(double list[], int &amount);
-void Search_Func(double list[], int amount);
+void Search_Func_Asc(double list[], int amount);
+void Sort_Func_Desc(double list[], int &amount);
 void Menu(double list[], int &amount);
 
 int main(){

@@ -11,12 +11,12 @@ More to add, can't come up with anything right now that i've noticed at this mom
 
 IMPORTANT!
 Missing sort function(FIXED)
-Fix sort function, only sorts one way
+Fix sort function, only sorts one way(FIXED)
 Missing find value function(FIXED)
 Overlook and refine comments
 
 BEFORE DEADLINE
-Fix sort function, only sorts one way
+Fix sort function, only sorts one way(FIXED)
 Overlook and refine comments
 Test how user input can fail and solve it.
 find more problems to fix, to tired right now
