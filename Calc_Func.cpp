@@ -2,6 +2,7 @@
 #include <windows.h>
 #include <cmath>
 #include <algorithm>
+
 using namespace std;
 
 /*Denna funktion beräknar och visar statistik som summan, minsta, största, medelvärdet, varians och standardavvikelser i en lista, dock så nekar den användaren om listan

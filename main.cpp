@@ -4,6 +4,7 @@
 #include <algorithm>
 
 using namespace std;
+
 void Add_Value(double list[], int &amount, double &sum);
 void Show_Value(double list[], int amount, double &sum);
 void Calc_Sum(double list[], int amount, double &sum);

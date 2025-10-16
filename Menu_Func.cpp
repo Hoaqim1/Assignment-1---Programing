@@ -29,9 +29,7 @@ void Menu(double list[], int &amount){
     double stdav = 0;
 
     do{
-
     cout << "Välj mellan 1 till 10 " << '\n';
-
     cout << "1. Lägg till ett värde i listan " << '\n';
     cout << "2. Visa antal värden i listan " << '\n';
     cout << "3. Visa summan av alla värden i listan" << '\n';
@@ -43,7 +41,13 @@ void Menu(double list[], int &amount){
     cout << "9. Sök efter ett visst värde i listan " << '\n';
     cout << "10. Avsluta " << '\n';
     cout << "Val: ";
-    cin >> choice;
+    if (!(cin >> choice)) {
+        cout << "Ogiltig inmatning, välj mellan 1 till 10!" << '\n';
+        cin.clear();
+        cin.ignore(100, '\n');
+        //Ställer om värdet till 0 för att användarens input inte ska sparas i choice, detta rensar minnet då inget värde ges när invalid input sker.
+        choice = 0;
+    }
 
     switch (choice){
 
