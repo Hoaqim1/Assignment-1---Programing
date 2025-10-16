@@ -18,6 +18,7 @@ Overlook and refine comments
 BEFORE DEADLINE
 Fix sort function, only sorts one way(FIXED)
 Overlook and refine comments
-Test how user input can fail and solve it.
+Test how user input can fail and solve it. FOUND BUG, PROGRAM FAILS WHEN USER INPUTS TEXT INSTEAD OF INTEGER/DOUBLE
+
 find more problems to fix, to tired right now
 
