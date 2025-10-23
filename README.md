@@ -1,4 +1,6 @@
 https://github.com/Hoaqim1/Assignment-1---Programing#
+ASSIGNMENT 2 HERE
+https://github.com/Hoaqim1/Assignment-2
 
 # **Datainsamlare**
 
